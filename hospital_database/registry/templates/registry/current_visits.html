@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>All Patients</title>
+</head>
+
+<body>
+  <h1>Current Visits</h1>
+  <ul>
+    {% for visit in visits %}
+    <li><a href="{% url 'discharge_visit' visit.id %}">Discharge</a></li>
+    <li>{{ visit.patient.last_name}}, {{ visit.patient.first_name }}</li>
+    <li>Admit time: {{ visit.admit_time }}</li>
+    <li>Discharged at: {{visit.discharge_time}}</li>
+    <li>Insurance: {{visit.patient.insurance}}</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'index' %}">Return to Registry Index</a>
+</body>
+
+</html>

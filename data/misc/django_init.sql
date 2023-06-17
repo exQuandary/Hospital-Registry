@@ -1,6 +1,3 @@
-DROP DATABASE IF EXISTS hospital_database;
-CREATE DATABASE hospital_database;
-
 \c hospital_database
 
 SET statement_timeout = 0;

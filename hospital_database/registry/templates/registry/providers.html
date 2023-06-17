@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>All Providers</title>
+</head>
+
+<body>
+  <h1>All Providers</h1>
+  <ul>
+    {% for provider in providers %}
+    <li>{{provider.last_name}}, {{provider.first_name}}</li>
+    <li>License: {{provider.license}}</li>
+    <li>Department: {{provider.department}}</li>
+    <br>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'index' %}">Return to Registry Index</a>
+</body>
+
+</html>

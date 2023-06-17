@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Edit Patient</title>
+</head>
+
+<body>
+  <h1>Edit Patient Data</h1>
+  <h2>Edit only those fields you wish to change.</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+  <br>
+  <a href="{% url 'index' %}">Return to Registry Index</a>
+</body>
+
+</html>

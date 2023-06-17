@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Edit Patient</title>
+</head>
+
+<body>
+  <h1>Updated Patient Information</h1>
+  <ul>
+    <li>{{patient.last_name}}</li>
+    <li>{{patient.first_name}}</li>
+    <li>{{patient.address}}</li>
+    <li>{{patient.city}}, {{patient.state}}</li>
+    <li>{{patient.insurance}}</li>
+    <li>{{patient.phone}}</li>
+    <li>{{patient.dob}}</li>
+
+  </ul>
+  <a href="{% url 'index' %}">Return to Registry Index</a>
+</body>
+
+</html>

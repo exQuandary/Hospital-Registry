@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Payment Letter</title>
+</head>
+
+<body>
+  <h1>Payment Required</h1>
+  <p>Dear {{bill.patient.first_name}} {{bill.patient.last_name}},</p>
+  <p>This letter is to inform you that you have a payment due for your recent visit on {{bill.visit.admit_time.date}}
+    for the amount of:
+  </p>
+  <p>{{bill.amount}}</p>
+  <a href="{% url 'index' %}">Return to Registry Index</a>
+</body>
+
+</html>

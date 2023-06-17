@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Index</title>
+  {% load static %}
+</head>
+<h1>Welcome to the index page for Krest Medical</h1>
+
+<body>
+
+  <ul>
+    <li><a href="{% url 'patients' %}">View and Edit Patient Profiles</a></li>
+    <li><a href="{% url 'providers' %}">View Full List of Providers</a></li>
+    <li><a href="{% url 'nurses' %}">View Full List of Nurses</a></li>
+    <li><a href="{% url 'bills' %}">View All Bills and Send Payment Letter</a></li>
+  </ul>
+  <br>
+  <br>
+  <ul>
+    <li><a href="{% url 'new_patient' %}">Create New Patient</li>
+    <li><a href="{% url 'new_visit' %}">Register Patient for new Visit</a></li>
+    <li><a href="{% url 'current_visits' %}">Current Visits</a></li>
+  </ul>
+</body>
+
+</html>

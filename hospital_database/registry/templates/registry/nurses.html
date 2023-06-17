@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>All Nurses</title>
+</head>
+
+<body>
+  <h1>All Nurses</h1>
+  <ul>
+    {% for nurse in nurses %}
+    <li>{{nurse.last_name}}, {{nurse.first_name}}</li>
+    <li>License: {{nurse.license}}</li>
+    <br>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'index' %}">Return to Registry Index</a>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Update Visit</title>
+  <style>
+    .success-message {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Discharge Patient</h1>
+
+
+  <ul>Visit Information</ul>
+  <li>{{ visit.patient.last_name}}, {{ visit.patient.first_name }}</li>
+  <li>Admit time: {{ visit.admit_time }}</li>
+  <li>Discharged at: {{visit.discharge_time}}</li>
+  <br>
+  <form method="POST" action="{% url 'discharge_visit' visit.id %}">
+    {% csrf_token %}
+    <button type="submit">Discharge with Current Time</button>
+  </form>
+  <br>
+  <a href="{% url 'index' %}">Return to Registry Index</a>
+
+</body>
+
+</html>
